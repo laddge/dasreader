@@ -30,9 +30,7 @@ template = np.array([t256[y:y+h, x:x+w].flatten() for x, y, w, h in boxes[:256]]
 A_norm = template / np.linalg.norm(template, axis=1, keepdims=True)
 
 capture = WindowsCapture(
-    cursor_capture=None,
-    draw_border=None,
-    monitor_index=None,
+    cursor_capture=False,
     window_name="DMX LEVELS",
 )
 
